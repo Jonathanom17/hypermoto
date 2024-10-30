@@ -1,0 +1,18 @@
+<div class="container-main">
+    <div class="container">
+        @for (item of cardInformation; track $index) {
+            <div class="card">
+                <div class="box-img">
+                  <img src="{{item.url}}" alt="">
+                </div>
+                <div class="box-content text-center">
+                  <h1>{{item.name}}</h1>
+                 
+                  <button class="order-button text-bold">More Info</button>
+                  
+                </div>
+              </div>
+        }
+        
+      </div>
+</div>

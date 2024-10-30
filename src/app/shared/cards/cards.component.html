@@ -1,0 +1,12 @@
+<div class="container-main">
+    <div class="slider">
+        <div class="slider-track">
+            @for (item of tam; track $index) {
+
+                <div class="card-img">
+                    <img [src]="item.url"  alt="" loading="lazy" >
+                </div>
+                }
+        </div>
+    </div>
+</div>

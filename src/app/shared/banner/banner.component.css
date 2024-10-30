@@ -1,0 +1,34 @@
+
+.header {
+  clip-path: polygon(0 0,100% 0,100% 95%,50% 100%,0 95%);
+  color: var(--mainWhite);
+  overflow: hidden;
+  display: block;
+}
+
+.height-max {
+
+  min-height: calc(80vh - 126px);
+  background: url(/img-banner/banner3.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: local;
+  background-repeat: no-repeat;
+  animation-name: zoom;
+  animation-duration: 20s;
+  animation-delay: 5s;
+  animation-iteration-count: infinite;
+  
+}
+
+@keyframes zoom {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.6) translateX(-5%);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
