@@ -1,69 +1,96 @@
+
+.navbar-container {
+    width: 100vw;
+    height: 12vh;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; */
+    /* background: linear-gradient(180deg,rgba(6,4,4,.63) 49%,rgba(8, 63, 243, 0)); */
+    background-color: black;
+    position: sticky !important;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    animation: echange-navBar linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 200px;
+}
+
+@keyframes echange-navBar {
+    to{
+        background-color: rgba(var(--mainBlack), 0.4);
+        backdrop-filter: blur(5px);
+        font-size: 18px;
+        color: rgb(241, 241, 112);
+    }
+}
+
+
+
 a{
-    text-decoration: none;
-    color: #fff;
-    font-family: roboto;
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
+     font-size:  1.5rem !important;
+}
+
+.logo{
+    margin-left: 2rem;
+}
+
+
+.menu-container{
+    margin-right: 2rem;
+}
+.btn-menu{
+    border: 1px solid white;
+    color: white !important;
+}
+
+.span-menu:hove{
+    border: 1px solid white;
+}
+
+.nav_list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+   
+    
+}
+.list-item {
+   
+    position: relative;
    
 }
 
-li{
-    float: left;
-    margin-left: 16px;
-}
 
-.contenedor{
-    max-width: 1000px;
-    margin: 0 auto;
-   position: sticky;
+.nav-tilte{
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    font-weight: 500;
+    color: white;
+    transition: all 300ms ease-in-out;
+    font-size: 15px;
 
-    nav{
-        float: right;
+    &:before{
+        content: "";
+        height: 0.3rem;
+        width: 0;
+        background-color: yellow;
+        position: absolute;
+        bottom: -0.5rem;
+        left: 0;
+        opacity: 0;
+        transition: all 500ms linear;
+    
+    }
+
+    &:hover::before{
+        width: 100%;
+        opacity: 1;
     }
     
 }
 
-
-.header-navbar{
-    position: sticky;
-    left: 0;
-    top: 0;
-    width: 100%;
-    box-sizing: border-box;
-    transition: to .6s;
-    background: rgb(0 0 0 /0.6);
-    padding: 10px;
-    overflow: hidden;
-}
-.logo{
-    display: inline-block;
-    margin: 0;
-    color: #fff;
-    font-size: 32px; 
-    font-family: merienda;
-}
-
-.navbar-contenedor {
-    overflow: hidden;
-    list-style: none;
-
-    
-}
-
-/* .img-banner{
-    display: flex;
-    height: 50vh;
-    background-image: url(/img-banner/banner.jpg);
-    aspect-ratio: inherit;
-    -webkit-background-size:cover;
-    background-size: cover;
-    background-position: center center;
-   
-} */
-
-.texto{
-    max-width: 1000px;
-    margin: 100px auto 0;
-    font-size: 5rem;
-}
