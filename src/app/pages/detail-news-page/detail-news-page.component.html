@@ -1,0 +1,73 @@
+<section class="d-flex flex-row m-0 container-banner">
+    <!-- carousel -->
+<div class="carousel">
+    <!-- list item -->
+    <div class="list">
+        <div class="item">
+            <img [src]="getCurrentSlideUrl().url">
+            <div class="content">
+                <div class="author">HONDA</div>
+                <div class="title">DESIGN SLIDER</div>
+                <div class="topic">CB650R</div>
+                <div class="des">
+                    <!-- lorem 50 -->
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima
+                    placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi
+                    ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus
+                    unde. Ut, exercitationem eum aperiam illo illum laudantium?
+                </div>
+                <div class="buttons">
+                    <button>SEE MORE</button>
+                    <button>SUBSCRIBE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- list thumnail -->
+    <div class="thumbnail">
+        @for (item of slides; track $index) {
+        @if ($index===0) {
+        <div class="item">
+
+            <img [src]="getCurrentSlideUrl().url">
+        </div>
+        }@else if (getCurrentSlideUrl().url!= item.url) {
+        <div class="item">
+            <img [src]="item.url">
+            <div class="content">
+                <div class="title">
+                    Name Slider
+                </div>
+                <div class="description">
+                    Description
+                </div>
+            </div>
+        </div>
+        }
+
+
+        }
+    </div>
+    <!-- next prev -->
+
+    <div class="arrows">
+        <button type="button" class="btn btn-secondary leftArrow" (click)="goToPrevious()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left"
+                viewBox="0 0 16 16">
+                <path
+                    d="M10 12.796V3.204L4.519 8zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753" />
+            </svg>
+        </button>
+        <button type="button" class="btn btn-secondary rightArrow" (click)="goToNext()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right"
+                viewBox="0 0 16 16">
+                <path
+                    d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753" />
+            </svg>
+        </button>
+    </div>
+    <!-- time running -->
+    <div class="time"></div>
+</div>
+
+</section>

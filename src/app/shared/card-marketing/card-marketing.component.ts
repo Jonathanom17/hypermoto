@@ -6,10 +6,10 @@ import { sliderIMG } from '../../interfaces/varios-interfaces';
   selector: 'shared-cards',
   standalone: true,
   imports: [NgOptimizedImage],
-  templateUrl: './cards.component.html',
-  styleUrl: './cards.component.css'
+  templateUrl: './card-marketing.component.html',
+  styleUrl: './card-marketing.component.css'
 })
-export class CardsComponent {
+export class CardMarketingComponent {
 
     tam:sliderIMG[]=[
        {url: "https://mundohonda.cr/wp-content/uploads/2024/09/SLIDE-TRANSALP-768x248.png"},

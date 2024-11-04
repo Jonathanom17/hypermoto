@@ -4,16 +4,17 @@ img{
   object-fit: cover;
   z-index: 1;
   
+  
 }
 .container-banner{
   width: 100vw;
-  height: 80vh;
- 
+  height: 60vh;
+
   
 }
 .header {
   clip-path: polygon(0 0,100% 0,100% 85%,50% 100%,0 85%);
-  color: var(--mainWhite);
+  color: var(--mainYellow);
   overflow: hidden;
   position: relative;
   
@@ -22,7 +23,6 @@ img{
 
 .height-max {
 
-  min-height: calc(80vh - 126px);
   /* background: url(/img-banner/banner3.jpg); */
   background-position: center;
   background-size: cover;
@@ -32,7 +32,6 @@ img{
   animation-duration: 20s;
   animation-delay: 5s;
   animation-iteration-count: infinite;
-  
 }
 
 @keyframes zoom {

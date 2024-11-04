@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { cardInfor } from '../../interfaces/varios-interfaces';
+import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'shared-news-page',
+  selector: 'shared-card-news',
   standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './news-page.component.html',
-  styleUrl: './news-page.component.css'
+  imports: [RouterLink],
+  templateUrl: './card-news.component.html',
+  styleUrl: './card-news.component.css'
 })
-export class NewsPageComponent {
+export class CardNewsComponent {
   cardInformation: cardInfor[] = [
     {
       url: 'https://powersports.honda.com/motorcycle/standard/-/media/products/family/cb650r/trims/trim-main/cb650r/2024/2024-cb650r-pearl_smoky_gray-1505x923.png',

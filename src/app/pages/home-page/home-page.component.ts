@@ -2,13 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { BannerComponent } from "../../shared/banner/banner.component";
 import { sliderIMG } from '../../interfaces/varios-interfaces';
-import { CardsComponent } from "../../shared/cards/cards.component";
-import { NewsPageComponent } from "../news-page/news-page.component";
+import { CardMarketingComponent } from "../../shared/card-marketing/card-marketing.component";
+
+import { CardNewsComponent } from "../../shared/card-news/card-news.component";
 
 @Component({
   selector: 'app-home-page',
   standalone: true,
-  imports: [RouterOutlet, BannerComponent, CardsComponent, NewsPageComponent],
+  imports: [RouterOutlet, BannerComponent, CardMarketingComponent, CardNewsComponent],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.css'
 })

@@ -1,4 +1,10 @@
-<section class="d-flex">
+
+
+<h3 class="section__title">
+    Motorcycle News
+  </h3>
+<section class="d-flex m-0 mt-1">
+    
     <div class="container">
         @for (item of cardInformation; track $index) {
             <div class="card">
@@ -8,7 +14,7 @@
                 <div class="box-content text-center">
                   <h1>{{item.name}}</h1>
                  
-                  <button class="order-button text-bold">know more</button>
+                  <button class="order-button text-bold" [routerLink]="'/news'">know more</button>
                   
                 </div>
               </div>
@@ -16,3 +22,4 @@
         
       </div>
 </section>
+

@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { HomePageComponent } from './pages/home-page/home-page.component';
-import { NewsPageComponent } from './pages/news-page/news-page.component';
+import { DetailNewsPageComponent } from './pages/detail-news-page/detail-news-page.component';
 
 export const routes: Routes = [
     {
@@ -14,7 +14,8 @@ export const routes: Routes = [
     },
     {
         path:'news',
-        component:NewsPageComponent
+        title:'Detailss',
+        component:DetailNewsPageComponent
     }
 
 ];
