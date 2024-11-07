@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { sliderIMG } from '../../interfaces/varios-interfaces';
 
 @Component({
   selector: 'shared-banner',

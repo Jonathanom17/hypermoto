@@ -13,8 +13,8 @@ export const routes: Routes = [
         component: HomePageComponent
     },
     {
-        path:'news',
-        title:'Detailss',
+        path:'news/:id',
+        title:'News Motocycle',
         component:DetailNewsPageComponent
     }
 

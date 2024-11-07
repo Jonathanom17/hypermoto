@@ -1,15 +1,22 @@
-export interface sliderIMG{
-    url:string,
-    title?: string,
-    
+export interface arrayIMG{
+    id:number;
+    marca:string;
+    modelo:string;
+    description:string;
+    imgMain:string;
+    arrayWP:wallpapersIMG[];
 }
 
 
-export interface cardInfor{
+export interface wallpapersIMG{
     url:string,
-    name:string,
-    modelo?:string,
-    precio?:number,
+    modelo:string;
+    description:string,
+}
+
+export interface logoMarga{
+    marca:string;
+    url:string,  
 }
 
 
@@ -19,8 +26,3 @@ export interface MenuItem{
 
 }
 
-export interface SliderIMG{
-    url:string,
-      title: string,
-      description: string,
-}

@@ -1,20 +1,43 @@
 import { Component, Input } from '@angular/core';
-import { sliderIMG } from '../../interfaces/varios-interfaces';
+import { arrayIMG, wallpapersIMG } from '../../interfaces/varios-interfaces';
 
 @Component({
-  selector: 'app-slider',
+  selector: 'shared-slider',
   standalone: true,
   imports: [],
   templateUrl: './slider.component.html',
   styleUrl: './slider.component.css'
 })
 export class SliderComponent {
-  @Input() slides: sliderIMG[] = [];
   
+  @Input()
+  slides!: arrayIMG[];
+  arrayWP!: wallpapersIMG[];
+  _datos!:arrayIMG;
+  constructor(){
+   
+  }
+
+  // getArrayDatos():arrayIMG{
+   
+  //   this.slides.flatMap( datos=>{
+  //    this._datos=datos;
+  //   })
+  //    return this._datos;
+  // }
+
   currentIndex: number = 0;
   timeoutId?: number;
 
-
+  ngOnInit(): void {
+    this.slides.flatMap(datos=>{
+      this.arrayWP=datos.arrayWP;
+      })
+    this.resetTimer();
+  }
+  ngOnDestroy() {
+    window.clearTimeout(this.timeoutId);
+  }
   resetTimer() {
     if (this.timeoutId) {
       window.clearTimeout(this.timeoutId);
@@ -25,7 +48,8 @@ export class SliderComponent {
   goToPrevious(): void {
     const isFirstSlide = this.currentIndex === 0;
     const newIndex = isFirstSlide
-      ? this.slides.length - 1
+
+      ? this.arrayWP.length - 1
       : this.currentIndex - 1;
 
     this.resetTimer();
@@ -33,7 +57,7 @@ export class SliderComponent {
   }
 
   goToNext(): void {
-    const isLastSlide = this.currentIndex === this.slides.length - 1;
+    const isLastSlide = this.currentIndex === this.arrayWP.length - 1;
     const newIndex = isLastSlide ? 0 : this.currentIndex + 1;
 
     this.resetTimer();
@@ -46,7 +70,9 @@ export class SliderComponent {
   }
 
   getCurrentSlideUrl() {
-    return this.slides[this.currentIndex];
+   
+    return this.arrayWP[this.currentIndex];
   }
+  
  
 }

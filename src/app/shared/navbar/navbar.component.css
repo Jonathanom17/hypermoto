@@ -2,16 +2,11 @@
 .navbar-container {
     width: 100vw;
     height: 12vh;
-    /* display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center; */
-    /* background: linear-gradient(180deg,rgba(6,4,4,.63) 49%,rgba(8, 63, 243, 0)); */
     background-color: black;
     position: sticky !important;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 1000;
     animation: echange-navBar linear both;
     animation-timeline: scroll(root);
     animation-range: 0 200px;
@@ -19,7 +14,7 @@
 
 @keyframes echange-navBar {
     to{
-        background-color: rgba(var(--mainBlack), 0.4);
+        background-color: rgba(var(--secondaryBlack), 0.4);
         backdrop-filter: blur(5px);
         font-size: 18px;
         color: rgb(241, 241, 112);
@@ -78,7 +73,7 @@ a{
         content: "";
         height: 0.3rem;
         width: 0;
-        background-color: yellow;
+        background-color: #d79447;
         position: absolute;
         bottom: -0.5rem;
         left: 0;

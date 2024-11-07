@@ -5,10 +5,10 @@
 :root {
     --mainBlue: #40acf1;
     --mainWhite: #ffffff;
-    --mainBlack: #292f36;
+    --mainBlack: #111213;
     --secondaryBlack: #1f2125;
     --mainGray: rgb(216, 214, 214);
-    --mainYellow: #e3b505;
+    --mainYellow: #d79447;
     --transparentBlue: rgba(64, 172, 241,0.7);
 }
 
@@ -20,7 +20,7 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background-color: #111317;
+    background-color: var(--mainBlack);
     height: fit-content;
     overflow-x: hidden;
 }

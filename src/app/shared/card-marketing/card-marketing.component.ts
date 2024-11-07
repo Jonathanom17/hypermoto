@@ -1,32 +1,17 @@
 import { NgOptimizedImage } from '@angular/common';
-import { Component } from '@angular/core';
-import { sliderIMG } from '../../interfaces/varios-interfaces';
+import { Component, Input } from '@angular/core';
+import { arrayIMG, logoMarga } from '../../interfaces/varios-interfaces';
 
 @Component({
-  selector: 'shared-cards',
+  selector: 'shared-cards-marketing',
   standalone: true,
   imports: [NgOptimizedImage],
   templateUrl: './card-marketing.component.html',
   styleUrl: './card-marketing.component.css'
 })
 export class CardMarketingComponent {
-
-    tam:sliderIMG[]=[
-       {url: "https://mundohonda.cr/wp-content/uploads/2024/09/SLIDE-TRANSALP-768x248.png"},
-       {url: "https://mundohonda.cr/wp-content/uploads/2024/09/SLIDE-XR150L-768x248.png"},
-       { url:"https://mundohonda.cr/wp-content/uploads/2024/09/SLIDE-TRANSALP-768x248.png"},
-       {url: "https://mundohonda.cr/wp-content/uploads/2024/09/SLIDE-XR150L-768x248.png"},
-       {url: "https://mundohonda.cr/wp-content/uploads/2024/08/SLIDE-CB190R-768x248.png"},
-       { url:"https://mundohonda.cr/wp-content/uploads/2024/09/SLIDE-TRANSALP-768x248.png"},
-       {url: "https://mundohonda.cr/wp-content/uploads/2024/09/SLIDE-XR150L-768x248.png"},
-       {url: "https://mundohonda.cr/wp-content/uploads/2024/08/SLIDE-CB190R-768x248.png"},
-       { url:"https://mundohonda.cr/wp-content/uploads/2024/09/SLIDE-TRANSALP-768x248.png"},
-       {url: "https://mundohonda.cr/wp-content/uploads/2024/09/SLIDE-XR150L-768x248.png"},
-       {url: "https://mundohonda.cr/wp-content/uploads/2024/08/SLIDE-CB190R-768x248.png"},
-       { url:"https://mundohonda.cr/wp-content/uploads/2024/09/SLIDE-TRANSALP-768x248.png"},
-
-
-    ];
+  @Input()
+  arrayIMG!:logoMarga[];
 
 
 }

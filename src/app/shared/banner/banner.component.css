@@ -14,16 +14,15 @@ img{
 }
 .header {
   clip-path: polygon(0 0,100% 0,100% 85%,50% 100%,0 85%);
-  color: var(--mainYellow);
   overflow: hidden;
   position: relative;
   
+  border-bottom: 1rem solid #d79447;
 }
 
 
-.height-max {
 
-  /* background: url(/img-banner/banner3.jpg); */
+.height-max {
   background-position: center;
   background-size: cover;
   background-attachment: local;
@@ -39,9 +38,17 @@ img{
       transform: scale(1);
   }
   50% {
-      transform: scale(1.6) translateX(-5%);
+      transform: scale(1.6) ;
   }
   100% {
       transform: scale(1);
   }
+}
+
+@media screen and (width <= 650px) {
+  .header, .container-banner{
+      max-height: 200px;
+  }
+  
+
 }

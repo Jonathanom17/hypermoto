@@ -12,7 +12,6 @@ import { RouterLink } from '@angular/router';
 export class NavbarComponent {
   rutasMenu: MenuItem[]=[
     {componente:'/home',title:'Inicio'},
-    {componente:'news',title:'News'},
     {componente:'home',title:'Planes'}
    ];
 }

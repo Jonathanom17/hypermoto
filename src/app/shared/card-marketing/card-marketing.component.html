@@ -1,16 +1,16 @@
-<section class="d-flex flex-row justify-content-center container-card">
+<section class="container" >
 
-    <div class="container-main">
-        <div class="slider">
-            <div class="slider-track">
-                @for (item of tam; track $index) {
+    
 
-                <div class="card-img">
-                    <img [src]="item.url" alt="" loading="lazy">
-                </div>
-                }
-            </div>
+        <div class="row">
+          <div class="stack ">
+            @for (item of arrayIMG; track $index) {
+                    <img [src]="item.url" alt="">
+            }
+           
+          </div>
+        
         </div>
-    </div>
-
+ 
+       
 </section>
