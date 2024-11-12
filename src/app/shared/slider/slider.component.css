@@ -1,6 +1,6 @@
 .container-banner{
   width: 100vw;
-  height: 88vh;
+  height: 95vh;
   overflow: hidden;
   
 }
@@ -88,7 +88,7 @@
 
 @media screen and (width <= 650px) {
 
-  .thumbnail{
+  .card-mini{
       display: none;
       visibility: hidden;
   }
@@ -110,8 +110,8 @@
 /* thumbail */
 .card-mini{
   position: absolute;
-  bottom: 90px;
-  left: 58%;
+  bottom: 80px;
+  left: 60%;
   width: max-content;
   z-index: 100;
   display: flex;
@@ -121,7 +121,7 @@
 
 .card-content{
   width: 150px;
-  height: 220px;
+  height: 250px;
   flex-shrink: 0;
   position: relative;
   & img{

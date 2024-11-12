@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { arrayIMG } from '../../interfaces/varios-interfaces';
+import { smallIMG } from '../../interfaces/varios-interfaces';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -11,6 +11,6 @@ import { RouterLink } from '@angular/router';
 })
 export class CardNewsComponent {
   @Input()
-  arrayCardInfo!:arrayIMG[];
+  arrayCardInfo!:smallIMG[];
   
 }

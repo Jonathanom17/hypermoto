@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { arrayIMG, wallpapersIMG } from '../../interfaces/varios-interfaces';
+import {  wallpapersIMG } from '../../interfaces/varios-interfaces';
 
 @Component({
   selector: 'shared-pruebas',

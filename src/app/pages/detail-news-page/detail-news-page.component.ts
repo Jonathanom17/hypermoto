@@ -1,6 +1,5 @@
-import { Component, Input, numberAttribute, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { arrayIMG } from '../../interfaces/varios-interfaces';
+import { Component, Input, OnInit } from '@angular/core';
+import {   wallpapersIMG } from '../../interfaces/varios-interfaces';
 import { CardMarketingComponent } from "../../shared/card-marketing/card-marketing.component";
 import { MotocycleService } from '../../services/motocycle.service';
 import { SliderComponent } from "../../shared/slider/slider.component";
@@ -8,16 +7,16 @@ import { SliderComponent } from "../../shared/slider/slider.component";
 @Component({
   selector: 'shared-news-page',
   standalone: true,
-  imports: [RouterOutlet, CardMarketingComponent, SliderComponent],
+  imports: [ CardMarketingComponent, SliderComponent],
   templateUrl: './detail-news-page.component.html',
   styleUrl: './detail-news-page.component.css'
 })
 export class DetailNewsPageComponent implements OnInit{
   
-  @Input({transform:numberAttribute})
-  id!:number;
-  arrayDatos:arrayIMG[]=[];
-  arrayTemp:arrayIMG[]=[];
+  @Input()
+  idModelo!:string;
+  arrayIMGWallpapers:wallpapersIMG[]=[];
+  arrayTemp:wallpapersIMG[]=[];
 
 
   constructor(private data: MotocycleService){
@@ -25,10 +24,10 @@ export class DetailNewsPageComponent implements OnInit{
   }
     ngOnInit(): void {
       
-      this.arrayTemp=this.data.getArrayMotocycle();
+      this.arrayTemp=this.data.getArrayIMGWP();
       this.arrayTemp.forEach((dato) =>{
-        if(dato.id===this.id){
-          this.arrayDatos.push(dato);
+        if(dato.modelo===this.idModelo){
+          this.arrayIMGWallpapers.push(dato);
         }
        
       });

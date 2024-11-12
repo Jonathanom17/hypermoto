@@ -29,15 +29,15 @@
             </div>
             }@else if (getCurrentSlideUrl().url!= item.url) {
             <div class="card-content">
-                <img [src]="item.url">
-                <div class="card-info">
+                <img loading="lazy" [src]="item.url">
+                <!-- <div class="card-info">
                     <div class="title">
                         Name Slider
                     </div>
                     <div class="description">
                         Description
                     </div>
-                </div>
+                </div> -->
             </div>
             }
 

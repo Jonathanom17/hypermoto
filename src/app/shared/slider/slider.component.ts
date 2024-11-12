@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { arrayIMG, wallpapersIMG } from '../../interfaces/varios-interfaces';
+import {  wallpapersIMG } from '../../interfaces/varios-interfaces';
 
 @Component({
   selector: 'shared-slider',
@@ -11,30 +11,24 @@ import { arrayIMG, wallpapersIMG } from '../../interfaces/varios-interfaces';
 export class SliderComponent {
   
   @Input()
-  slides!: arrayIMG[];
   arrayWP!: wallpapersIMG[];
-  _datos!:arrayIMG;
+  // _datos!:arrayIMG;
   constructor(){
    
   }
 
-  // getArrayDatos():arrayIMG{
-   
-  //   this.slides.flatMap( datos=>{
-  //    this._datos=datos;
-  //   })
-  //    return this._datos;
-  // }
 
   currentIndex: number = 0;
   timeoutId?: number;
 
   ngOnInit(): void {
-    this.slides.flatMap(datos=>{
-      this.arrayWP=datos.arrayWP;
-      })
+    // this.slides.flatMap(datos=>{
+    //   this.arrayWP=datos.arrayWP;
+    //   })
     this.resetTimer();
   }
+
+
   ngOnDestroy() {
     window.clearTimeout(this.timeoutId);
   }

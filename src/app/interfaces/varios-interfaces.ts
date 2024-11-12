@@ -1,16 +1,15 @@
-export interface arrayIMG{
+export interface smallIMG{
     id:number;
     marca:string;
     modelo:string;
     description:string;
     imgMain:string;
-    arrayWP:wallpapersIMG[];
 }
 
 
 export interface wallpapersIMG{
-    url:string,
     modelo:string;
+    url:string,
     description:string,
 }
 
