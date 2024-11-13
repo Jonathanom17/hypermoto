@@ -13,8 +13,8 @@ export interface wallpapersIMG{
     description:string,
 }
 
-export interface logoMarga{
-    marca:string;
+export interface publicidadIMG{
+    marca?:string;
     url:string,  
 }
 

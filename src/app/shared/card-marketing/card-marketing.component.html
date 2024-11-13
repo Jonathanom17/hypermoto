@@ -1,16 +1,22 @@
-<section class="container" >
+<section class="container ">
 
+  <carousel  id="carousel" [itemsPerSlide]="itemsPerSlide"
+          [singleSlideOffset]="true"
+          [interval]="0"
+          [noWrap]="false"
+        [showIndicators]="false"
+        [interval]="3500"
+        class="carousel-container " >
     
-
-        <div class="row">
-          <div class="stack ">
-            @for (item of arrayIMG; track $index) {
-                    <img [src]="item.url" alt="">
-            }
-           
-          </div>
-        
-        </div>
- 
+    @for (item of arrayIMG; track $index) {
+      <slide class="slider-container  justify-content-center align-items-center">
+        <img [src]="item.url" alt="image slide" class="img-slide" >
        
+      </slide>
+     
+      }
+    
+  
+  </carousel>
+
 </section>

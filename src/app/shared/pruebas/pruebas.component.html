@@ -1,0 +1,66 @@
+<section class="mat-parent">
+    <carousel>
+        <div class="carousel-inner"  role="listbox">
+
+            <slide>
+                <div class="carousel-item" style="display: block; width: 100%;">
+                    <div class="col-md-4">
+                        @for (item of slides; track $index) {
+                            
+                              <div class="card">
+                                <div class="box-img">
+                                  <img loading="lazy" [src]="item.imgMain" alt="image slide" >
+                                </div>
+                                <div class="box-content ">
+                                  <h1>{{item.modelo}}</h1>
+                                  <button class="order-button text-bold">know more</button>
+                          
+                                </div>
+                              </div>
+                           
+                          
+                            }
+
+                    </div>
+                    <div class="col-md-4">
+                        @for (item of slides; track $index) {
+                            
+                            <div class="card">
+                              <div class="box-img">
+                                <img loading="lazy" [src]="item.imgMain" alt="image slide" >
+                              </div>
+                              <div class="box-content ">
+                                <h1>{{item.modelo}}</h1>
+                                <button class="order-button text-bold">know more</button>
+                        
+                              </div>
+                            </div>
+                         
+                        
+                          }
+                    </div>
+                    <div class="col-md-4">
+                        @for (item of slides; track $index) {
+                            
+                            <div class="card">
+                              <div class="box-img">
+                                <img loading="lazy" [src]="item.imgMain" alt="image slide" >
+                              </div>
+                              <div class="box-content ">
+                                <h1>{{item.modelo}}</h1>
+                                <button class="order-button text-bold">know more</button>
+                        
+                              </div>
+                            </div>
+                         
+                        
+                          }
+                    </div>
+                </div>
+            </slide>
+
+            
+        </div>
+    </carousel>
+</section>
+<!--/*for mobile and small  devices */-->

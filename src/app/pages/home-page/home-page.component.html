@@ -3,12 +3,14 @@
 <shared-banner />
 
 <br>
-<shared-cards-marketing [arrayIMG]="arrayLogoMarca"/>
+<shared-cards-marketing [arrayIMG]="arrayLogoMarca" [itemsPerSlide]="2"/>
 <br>
 
-<shared-card-news [arrayCardInfo]="arrayIMGSmall" /> 
-
+<shared-card-news [slides]="arrayIMGSmall" />  
 <br>
 
+<br>
+<shared-cards-marketing [arrayIMG]="arrayPromociones" [itemsPerSlide]="1"/>
+<br>
 <shared-slider [arrayWP]="sendArrayWP"/>
 

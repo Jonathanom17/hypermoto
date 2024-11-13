@@ -1,17 +1,20 @@
 import { Component, Input, OnInit } from '@angular/core';
-import {  wallpapersIMG } from '../../interfaces/varios-interfaces';
+import {  smallIMG, wallpapersIMG } from '../../interfaces/varios-interfaces';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 @Component({
   selector: 'shared-pruebas',
   standalone: true,
-  imports: [],
+  imports: [CarouselModule],
   templateUrl: './pruebas.component.html',
   styleUrl: './pruebas.component.css'
 })
-export class PruebasComponent implements OnInit {
-  ngOnInit(): void {
-  
-  }
+export class PruebasComponent  {
+  @Input()
+  slides!:smallIMG[];
+  myInterval = 0;
+ 
+  itemsPerSlide = 4;
   
   
  
