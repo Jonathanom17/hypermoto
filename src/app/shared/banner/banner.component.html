@@ -1,11 +1,26 @@
-<section class="d-flex flex-row m-0 container-banner">
+<!-- <section class="d-flex flex-row m-0 container-banner">
   <div class="header">
     <div  class="height-max">
-      <img src="/img-banner/banner3.jpg" alt="">
+      @for (item of arrayIMG; track $index) {
+        <img [src]="item.url" alt="">
+      }
     </div>
   
   
   
   </div>
+</section> -->
+
+<section class="d-flex flex-row m-0 container-banner">
+  <!-- carousel -->
+  <article class="slider-main m-0 p-0">
+      <!-- list item -->
+      <section class="slider-content">
+          <div class="slide">
+              <img [src]="getCurrentSlideUrl().url">
+          </div>
+      </section>
+
+  </article>
 </section>
 

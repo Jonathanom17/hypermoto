@@ -172,7 +172,7 @@ export class MotocycleService {
         { url: 'logos/honda.webp', marca: 'HONDA' },
         { url: 'logos/kawasaki.webp', marca: 'KAWASAKI' },
         { url: 'logos/ktm.webp', marca: 'KTM' },
-        { url: 'logos/suzuki.webp', marca: 'SUZUKI' },
+        { url: 'logos/suzuki.png', marca: 'SUZUKI' },
         { url: 'logos/yamaha.webp', marca: 'YAMAHA' },
         { url: 'logos/husqvarna.webp', marca: 'HUSQVARNA' },
         { url: 'logos/triumph.webp', marca: 'TRIUMPH' },

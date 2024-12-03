@@ -1,16 +1,42 @@
 <!-- <shared-cards/>  -->
 
-<shared-banner />
+<shared-banner [arrayIMG]="arrayBanner" />
 
 <br>
-<shared-cards-marketing [arrayIMG]="arrayLogoMarca" [itemsPerSlide]="2"/>
+@defer(on viewport){
+<shared-cards-marketing [arrayIMG]="arrayPromociones" [itemsPerSlide]="1" />
+}@placeholder {
+<shared-spinner />
+}
 <br>
 
-<shared-card-news [slides]="arrayIMGSmall" />  
-<br>
+@defer(on viewport){
+<shared-card-news [slides]="arrayIMGSmall" />
+}@placeholder (minimum 3s) {
+<shared-spinner />
+}
+
 
 <br>
-<shared-cards-marketing [arrayIMG]="arrayPromociones" [itemsPerSlide]="1"/>
-<br>
-<shared-slider [arrayWP]="sendArrayWP"/>
+@defer(on viewport){
+<shared-slider [arrayWP]="sendArrayWP" />
+}@placeholder (minimum 6s){
+<shared-spinner />
+}
 
+
+<br>
+@defer(on viewport){
+<shared-cards-marketing [arrayIMG]="arrayLogoMarca" [itemsPerSlide]="2" />
+<br>
+}@placeholder (minimum 8s) {
+<shared-spinner />
+}
+
+<br>
+@defer(on viewport){
+<shared-pruebas [arrayLogoMarca]="arrayLogoMarca" />
+<br>
+}@placeholder (minimum 8s) {
+<shared-spinner />
+}

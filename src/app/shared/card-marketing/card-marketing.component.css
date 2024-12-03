@@ -16,22 +16,24 @@
 }
 
 .slider-container{
+  justify-content: center;
+  justify-items: center;
   width: 100px;
   height:200px;
   
 }
 
 @media screen and (width <= 650px) {
-  .img{
-    width: 10px;
-    height:150px;
+  .slider-container{
+    width: 200px;
+    height:200px;
+    & img{
+      object-fit: cover;
+      width: 450px;
+    } 
     
   }
 
 }
 
-.icon-prev, .icon-next{
-  display: none  !important;
-  visibility: hidden !important;
-}
 

@@ -1,5 +1,5 @@
 
-import { Component, Input } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import {  publicidadIMG } from '../../interfaces/varios-interfaces';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 
@@ -16,12 +16,13 @@ export class CardMarketingComponent {
   @Input()
   itemsPerSlide:number=0;
 
+  @ViewChild("myButton") myButton!: ElementRef;
+  
   constructor(){
     this.ocultarbotones()
   }
   ocultarbotones(){
-    const element= document.getElementById('#carousel');
-    console.log(element)
+    
 
   }
 

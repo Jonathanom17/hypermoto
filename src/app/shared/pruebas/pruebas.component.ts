@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import {  smallIMG, wallpapersIMG } from '../../interfaces/varios-interfaces';
+import {  publicidadIMG, smallIMG, wallpapersIMG } from '../../interfaces/varios-interfaces';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 @Component({
@@ -10,12 +10,50 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
   styleUrl: './pruebas.component.css'
 })
 export class PruebasComponent  {
+   
   @Input()
-  slides!:smallIMG[];
-  myInterval = 0;
- 
-  itemsPerSlide = 4;
-  
+  arrayLogoMarca:publicidadIMG[]=[];
+  constructor(){
+   
+  }
+
+
+  currentIndex: number = 0;
+  timeoutId?: number;
+
+  ngOnInit(): void {
+    this.resetTimer();
+  }
+
+
+  ngOnDestroy() {
+    window.clearTimeout(this.timeoutId);
+  }
+  resetTimer() {
+    if (this.timeoutId) {
+      window.clearTimeout(this.timeoutId);
+    }
+    this.timeoutId = window.setTimeout(() => this.goToNext(), 3000);
+  }
+
+
+  goToNext(): void {
+    const isLastSlide = this.currentIndex === this.arrayLogoMarca.length - 1;
+    const newIndex = isLastSlide ? 0 : this.currentIndex + 1;
+
+    this.resetTimer();
+    this.currentIndex = newIndex;
+  }
+
+  goToSlide(slideIndex: number): void {
+    this.resetTimer();
+    this.currentIndex = slideIndex;
+  }
+
+  getCurrentSlideUrl() {
+   
+    return this.arrayLogoMarca[this.currentIndex];
+  }
   
  
 }
